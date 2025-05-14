@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         var num1
+         var num2 = null
+         console.log(num1)
+         console.log(num2)
+
+         console.log(Boolean(num1))
+         console.log(Boolean(num2))
+         console.log('-----------------')
+         console.log(Boolean(-1))
+         console.log(Boolean(10))
+         console.log(Boolean(''))
+
+         console.log('-----------------')
+         // 확인 : 사용자가 입력한 값 저장
+         // 취소 : null
+         var name = prompt('당신의 이름은?', '홍길동')
+         if (name) {
+            document.write(name)
+         }
+         console.log(name)
+      </script>
+   </body>
+</html>

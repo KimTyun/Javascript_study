@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // inch를 입력받아 cm으로 바꾸는 코드 (1 inch = 2.54cm)
+
+         let inch = prompt('길이를 입력하세요(인치)')
+
+         console.log(Number(inch))
+         if (!isNaN(Number(inch))) {
+            document.write(`${Number(inch) * 2.54}cm입니다`)
+         }
+      </script>
+   </body>
+</html>

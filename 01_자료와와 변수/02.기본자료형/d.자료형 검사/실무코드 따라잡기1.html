@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         var ticket = prompt('예매수량을 입력해 주세요.')
+         console.log(ticket)
+         var now = new Date()
+         console.log(now)
+         var time = now.getHours()
+         console.log(time)
+         time = 16
+
+         console.log(time++)
+         if (Number(ticket) === 1 && 15 <= time <= 23) {
+            document.write('예매했습니다.')
+         }
+      </script>
+   </body>
+</html>
