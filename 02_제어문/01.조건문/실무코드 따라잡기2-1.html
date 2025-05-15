@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 시험점수에 따른 학점을 구하세요.
+
+         let scsore
+         while (true) {
+            score = Number(prompt('점수를 입력하세요.', 0))
+            if (score < 0 || score > 100 || isNaN(score)) {
+               alert('잘못된 점수입니다.')
+            } else {
+               break
+            }
+         }
+
+         if (score >= 90) {
+            document.write('A')
+         } else if (score >= 80) {
+            document.write('B')
+         } else if (score >= 70) {
+            document.write('C')
+         } else if (score >= 60) {
+            document.write('D')
+         } else {
+            document.write('F')
+         }
+      </script>
+   </body>
+</html>

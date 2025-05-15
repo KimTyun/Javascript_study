@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         const students = ['김영수', '이지혜', '류상진', '박미나', '서한울']
+         //  류상진 학생이 휴학을 해서 학생 배열에서 류상진을 제거해야함
+
+         const index = students.indexOf('류상진1')
+         console.log(index)
+
+         if (index === -1) {
+            alert('해당 학생이 존재하지 않습니다.')
+         }
+
+         students.splice(index, 1)
+         console.log(students)
+      </script>
+   </body>
+</html>
