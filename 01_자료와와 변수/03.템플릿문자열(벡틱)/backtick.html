@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
    <head>
       <meta charset="UTF-8" />
@@ -10,8 +10,18 @@
          var age = 20
          var address = '서울'
 
-         console.log('영수의 나이는 ' + age + '세 이고, ' + address + '에 살고 있습니다.')
-         console.log('영수의 나이는 %d 세 이고, %s에 살고 있습니다.', age, address)
+         console.log(
+            '영수의 나이는 ' +
+               age +
+               '세 이고, ' +
+               address +
+               '에 살고 있습니다.',
+         )
+         console.log(
+            '영수의 나이는 %d 세 이고, %s에 살고 있습니다.',
+            age,
+            address,
+         )
          console.log(`영수의 나이는 ${age}세 이고, ${address}에 살고 있습니다.`)
 
          console.log('표현식 10+10의 값은' + (10 + 10) + '입니다.')

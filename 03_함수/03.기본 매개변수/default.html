@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         function enraings(name, wage = 10000, hours = 40) {
+            console.log(`${name}님의 급여정보`)
+            console.log(`시급 ${wage.toLocaleString('ko-KR')} 원`)
+            console.log(`급여시간${hours}시간`)
+            console.log(`급여${(wage * hours).toLocaleString('ko-KR')}원`)
+         }
+
+         enraings('구름')
+         enraings('별', 10000)
+         enraings('구름', 40000, 50)
+      </script>
+   </body>
+</html>

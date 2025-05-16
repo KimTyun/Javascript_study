@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         function min(...items) {
+            let min = items[0]
+            for (let i of items) {
+               if (min > i) {
+                  min = i
+               }
+            }
+            return min
+         }
+
+         console.log(min(123, 351, 845, 76, 22, 35, 345123, 123))
+      </script>
+   </body>
+</html>

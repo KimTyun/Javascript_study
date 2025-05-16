@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         function myFunc1(a, b) {
+            return a + b
+         }
+
+         console.log(myFunc1(1, 2))
+
+         //  중괄호 생략가능
+         const myFunc2 = (a, b) => console.log('합 : ', a + b)
+
+         myFunc2(1, 2)
+
+         //  return도 생략가능
+         const myFunc3 = (a, b) => a + b
+
+         console.log(myFunc3(1, 2))
+
+         const obj = { a: 'one', b: 'two', c: 'two' }
+
+         //  JSON 객체를 리턴할땐 괄호 필요함
+         const myFunc4 = () => ({ a: 'one', b: 'two', c: 'two' })
+
+         console.log(myFunc4())
+      </script>
+   </body>
+</html>
