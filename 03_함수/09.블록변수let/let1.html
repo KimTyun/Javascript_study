@@ -7,17 +7,16 @@
    </head>
    <body>
       <script>
-         function min(...items) {
-            let min = items[0]
-            for (let i of items) {
-               if (min > i) {
-                  min = i
-               }
+         function logScope() {
+            var local = 2
+            if (local) {
+               var local = '다른값'
+               console.log(local)
             }
-            return min
+            console.log(local)
          }
 
-         console.log(min(123, 351, 845, 76, 22, 35, 345123, 123, 11))
+         logScope()
       </script>
    </body>
 </html>
