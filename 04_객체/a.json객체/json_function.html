@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         const iPhone15 = {
+            model: 'iPhone 15',
+            manufacturer: 'Apple',
+            releaseYear: 2023,
+            colors: ['Black', 'Blue', 'Pink', 'Yellow', 'Green'],
+         }
+
+         document.write(iPhone15)
+         document.write(`<hr/>`)
+
+         const jsonToString1 = JSON.stringify(iPhone15)
+         document.write(jsonToString1)
+         console.log(jsonToString1)
+
+         // -------------
+         const iPhone15_2 = '{"model":"iPhone 15","manufacturer":"Apple","releaseYear":2023,"colors":["Black","Blue","Pink","Yellow","Green"]}'
+
+         const stringToJson = JSON.parse(iPhone15_2)
+         console.log(stringToJson)
+
+         const jsonToString2 = JSON.stringify(iPhone15, null, 2)
+         console.log(jsonToString2)
+      </script>
+   </body>
+</html>

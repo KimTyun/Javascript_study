@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 객체 = 속성 + 기능(함수)
+
+         class Car {
+            constructor(color, seater) {
+               this.color = color
+               this.seater = seater
+            }
+
+            run(status) {
+               if (status) return '자동차가 달립니다.'
+            }
+            stop(status) {
+               if (status) return '자동차가 멈춥니다.'
+            }
+         }
+         //  Car 객체 생성
+         const myCar1 = new Car('블랙', 4)
+         const myCar2 = new Car('화이트', 6)
+
+         console.log(`${myCar1.color}색상의 ${myCar1.seater}인승 자동차`)
+         console.log(`${myCar2.color}색상의 ${myCar2.seater}인승 자동차`)
+      </script>
+   </body>
+</html>

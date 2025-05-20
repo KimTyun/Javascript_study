@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         let car1 = {
+            color: '화이트',
+            seater: 6,
+            run: function (status) {
+               if (status) return this.color + '달리기'
+            },
+            stop: function (status) {
+               if (status) return this.color + '멈추기'
+            },
+         }
+
+         console.log(car1.color)
+         console.log(car1.seater)
+         console.log(car1.run(true))
+         console.log(car1.stop(true))
+
+         let car2 = {
+            color: '블랙',
+            seater: 4,
+            run: function (status) {
+               if (status) return '달리기'
+            },
+            stop: function (status) {
+               if (status) return '멈추기'
+            },
+         }
+      </script>
+   </body>
+</html>
