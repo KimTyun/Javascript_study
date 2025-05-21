@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <h1 class="title" id="title1">headers</h1>
+      <h1 class="title" id="title2">headers</h1>
+      <h1 class="title" id="title3">headers</h1>
+      <h1 class="title" id="title4">headers</h1>
+      <h1 class="title" id="title5">headers</h1>
+      <script>
+         const headers = document.querySelectorAll('h1')
+
+         headers.forEach((header) => {
+            console.log(header)
+            header.style.color = 'white'
+            header.style.backgroundColor = 'black'
+            header.style.padding = '10px'
+         })
+      </script>
+   </body>
+</html>

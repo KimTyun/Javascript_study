@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         var t = 'Hello Thank you good luck to you'
+
+         for (i in t) {
+            document.write(`(${i}: ${t[i]})`)
+         }
+         document.write('<hr>')
+         document.write(t[16], '<br>')
+
+         //  indexOf(찾을문자열,찾기시작할 인덱스번호)
+         document.write(t.indexOf('you'), '<br>')
+         document.write(t.indexOf('you', 16), '<br>')
+         document.write('<hr>')
+
+         document.write(t.search('you'), '<br>')
+         document.write(t.substring(6, 12))
+
+         document.write('<hr>')
+
+         document.write(t.replace('you', 'me'), '<br>')
+         document.write(t.length, '<br>')
+
+         var s = t.split(' ')
+         console.log(s)
+      </script>
+   </body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <img alt="" class="rect" />
+      <img alt="" class="rect" />
+      <img alt="" class="rect" />
+      <img alt="" class="rect" />
+      <script>
+         const rects = document.querySelectorAll('.rect')
+
+         rects.forEach((rect, index) => {
+            const width = (index + 1) * 100
+            rect.setAttribute('src', `https://picsum.photos/${width}/250`)
+            rect.setAttribute('alt', '이미지')
+         })
+      </script>
+   </body>
+</html>
