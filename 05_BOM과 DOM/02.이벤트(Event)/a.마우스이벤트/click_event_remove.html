@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <style>
+         h1 {
+            user-select: none;
+         }
+      </style>
+   </head>
+   <body>
+      <h1>클릭 횟수: 0</h1>
+      <button id="connect">이벤트 연결</button>
+      <button id="disconnect">이벤트 제거</button>
+      <p>이벤트 연결 상태: 해제</p>
+      <script>
+         let count = 0
+         let isConnect = false
+
+         const h1 = document.querySelector('h1')
+         const p = document.querySelector('p')
+         const connectBtn = document.querySelector('#connect')
+         const disconnectBtn = document.querySelector('#disconnect')
+
+         const listener = function () {
+            count++
+            h1.textContent = `클릭 횟수: ${count}`
+         }
+
+         connectBtn.addEventListener('click', () => {
+            //이벤트 연결하기
+            if (isConnect == false) {
+               h1.addEventListener('click', listener)
+               p.textContent = '이벤트 연결 상태: 연결'
+               isConnect = true
+            }
+         })
+         disconnectBtn.addEventListener('click', () => {
+            if (isConnect == true) {
+               //이벤트가 연결되어있을 때 해제하기
+               h1.removeEventListener('click', listener)
+               p.textContent = '이벤트 연결 상태: 해제'
+               isConnect = false
+            }
+         })
+      </script>
+   </body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <style>
+      input {
+         padding: 10px;
+         font-size: 16px;
+      }
+      input:focus {
+         background-color: lightyellow;
+      }
+   </style>
+   <body>
+      <h3>이름을 입력하세요</h3>
+      <input type="text" name="nameInput" id="nameInput" placeholder="이름 입력" class="nameInput" />
+      <script>
+         const input = document.getElementById('nameInput')
+         const input2 = document.querySelector('#nameInput')
+
+         input.addEventListener('focus', (a, b, c, d, e) => {
+            console.log(a, b, c, d, e)
+            console.log('포커스되었습니다.')
+         })
+      </script>
+   </body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <input type="checkbox" name="" id="" />
+      <span>타이머 활성화</span>
+      <h1></h1>
+
+      <script>
+         let timer = 0
+         let timerId
+         const h1 = document.querySelector('h1')
+         const checkbox = document.querySelector('input')
+
+         checkbox.addEventListener('change', (event) => {
+            if (event.currentTarget.checked) {
+               timerId = setInterval(() => {
+                  h1.textContent = `${timer++}초`
+               }, 1000)
+            } else {
+               clearInterval(timerId)
+            }
+         })
+      </script>
+   </body>
+</html>

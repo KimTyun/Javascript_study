@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <h1>할 일 목록</h1>
+      <input type="text" name="" id="todo" />
+      <button id="add-button">추가하기</button>
+      <div id="todo-list"></div>
+
+      <script>
+         const input = document.querySelector('#todo')
+         const todoList = document.querySelector('#todo-list')
+         const addButton = document.querySelector('#add-button')
+         let keyCount = 0
+
+         function addTodo() {
+            if (input.value.trim() === '') {
+               alert('할 일을 입력해 주세요.')
+               return
+            }
+            const item = document.createElement('div')
+            const checkbox = document.createElement('input')
+            const text = document.createElement('span')
+            const button = document.createElement('button')
+
+            checkbox.type = 'checkbox'
+            text.textContent = input.value.trim()
+            button.textContent = '제거하기'
+
+            checkbox.addEventListener('change', (event) => {
+               item.style.textDecoration = event.target.checked ? 'line-through' : ''
+            })
+            button.addEventListener('click', () => {
+               removeTodo(key)
+            })
+
+            const key = keyCount
+            keyCount += 1
+
+            item.setAttribute('data-key', key) // 식별자를 속성으로 지정
+            item.appendChild(checkbox)
+            item.appendChild(text)
+            item.appendChild(button)
+
+            todoList.appendChild(item) // item객체 추가
+         }
+
+         function removeTodo(key) {
+            const item = document.querySelector(`[data-key="${key}"]`)
+            todoList.removeChild(item)
+         }
+
+         // 이벤트 연결
+         addButton.addEventListener('click', addTodo)
+
+         // 엔터 누르면 자동 추가
+         input.addEventListener('keyup', (event) => {
+            const ENTER = 13
+            console.log(event.keyCode)
+            if (event.keyCode === ENTER) {
+               addTodo()
+            }
+         })
+      </script>
+   </body>
+</html>

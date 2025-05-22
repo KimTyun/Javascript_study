@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <button onclick="test1()">클릭</button>
+      <!-- 이벤트 객체 사용시 반드시 event 매개변수 전달 -->
+      <input type="text" onkeyup="test2(event)" name="" id="" />
+      <script>
+         function test1() {
+            alert('click evnet')
+         }
+
+         function test2(event) {
+            const inputValue = event.target.value
+            alert(inputValue)
+         }
+      </script>
+   </body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 문서 전체에 이벤트를 건다
+         document.addEventListener('keydown', (event) => {
+            console.log(event)
+            // 발생한 이벤트에 대한 정보를 가지고 있다.
+            console.log('altkey:', event.altKey)
+            console.log('ctrlkey:', event.ctrlKey)
+            console.log('shiftkey:', event.shiftKey)
+            console.log('key:', event.key)
+         })
+      </script>
+   </body>
+</html>
