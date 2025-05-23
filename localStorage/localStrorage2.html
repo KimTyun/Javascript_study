@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <input type="text" name="" id="nameInput" placeholder="이름입력=" />
+      <button onclick="saveName()">저장</button>
+      <p id="greeting"></p>
+      <script>
+         //1. 문자열 저장, 불러오기
+
+         // 저장
+         const name = document.querySelector('#nameInput')
+         const p = document.querySelector('p')
+         function saveName() {
+            localStorage.setItem('username', name?.value)
+            showGreeteing()
+         }
+
+         function showGreeteing() {
+            const savedName = localStorage.getItem('username')
+            if (saveName) {
+               p.textContent = `안녕하세요, ${savedName}님`
+            }
+         }
+
+         showGreeteing()
+      </script>
+   </body>
+</html>
