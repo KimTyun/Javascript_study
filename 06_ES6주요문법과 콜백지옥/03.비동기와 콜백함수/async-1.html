@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         //  console.log('hello')
+         //  setTimeout(() => {
+         //     console.log('Bye')
+         //  }, 3000)
+
+         //  console.log('hello agn')
+
+         function sayGoodbye(callback) {
+            setTimeout(() => {
+               console.log('Bye')
+               callback()
+            }, 3000)
+         }
+         console.log('hello')
+
+         sayGoodbye(function () {
+            console.log('Hello Agn')
+         })
+
+         console.log('haha')
+      </script>
+   </body>
+</html>

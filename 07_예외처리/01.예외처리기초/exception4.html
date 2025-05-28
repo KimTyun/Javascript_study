@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         try {
+            const array = new Array(50000000000000000)
+         } catch (error) {
+            console.log(error)
+            console.log(error.name)
+            console.log(error.message)
+         }
+      </script>
+   </body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         const options = {
+            method: 'GET',
+            headers: {
+               accept: 'application/json',
+               Authorization:
+                  'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4MjUwNmY1YTEyMjhhM2NkZTI2NWEzNmVhMDUyMDg2ZCIsIm5iZiI6MTc0ODM5Mzk2Ni42MSwic3ViIjoiNjgzNjVmZWVlOGJiZDdjMGQ2ZWIzY2FmIiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.OWmIjNieuEOZekQmYUuWPXuKgbZmZbNGGxO3YQSEsCg',
+            },
+         }
+
+         fetch('https://api.themoviedb.org/3/movie/now_playing?language=ko-KR&page=1&region=KR', options)
+            .then((res) => res.json())
+            .then((res) => console.log(res))
+            .catch((err) => console.error(err))
+      </script>
+   </body>
+</html>

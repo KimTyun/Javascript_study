@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         const contacts = {
+            famillyName: '이',
+            name: '영희',
+            age: 22,
+         }
+         //  ES6 이전
+         //  let famillyName = contacts.famillyName
+         //  let name = contacts.name
+         //  let age = contacts.age
+         //  console.log(famillyName)
+         //  console.log(name)
+         //  console.log(age)
+
+         let { famillyName, name: otherName, age } = contacts
+
+         console.log(famillyName)
+         console.log(otherName)
+         console.log(age)
+      </script>
+   </body>
+</html>

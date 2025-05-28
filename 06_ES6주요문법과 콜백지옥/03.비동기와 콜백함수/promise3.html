@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // Promise의 3가지 상태
+         function asyncTask() {
+            return new Promise((resolve, reject) => {
+               const success = true
+               if (success) resolve('Task success')
+               else reject('Task failed')
+            })
+         }
+
+         asyncTask()
+            .then((result) => console.log(result))
+            .catch((error) => console.log(error))
+      </script>
+   </body>
+</html>
